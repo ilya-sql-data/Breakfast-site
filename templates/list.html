@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="GET">
+    <label for="sort">Сортировать по:</label>
+    <select name="sort" id="sort">
+        <option value="cretated_at_asc">Дата ↑</option>
+        <option value="cretated_at_desc">Дата ↓</option>
+    </select>
+
+    <label for="date">Фильтр по дате (ГГГГ-ММ-ДД):</label>
+    <input type="date" name="date" id="date">
+
+    <input type="date" name="date" id="date">
+</form>
+
+<table>
+    <tr>
+        <th>Комментарии</th>
+        <th>Завтрак</th>
+        <th>Кофе</th>
+        <th>Фрукты</th>
+        <th>Время</th>
+    </tr>
+    {% for o in orders -%}
+    <tr>
+        <td>{{o["name"]}}</td>
+        <td>{{o["maindish"]}}</td>
+        <td>{{o["coffee"]}}</td>
+        <td>{{o["fruit"]}}</td>
+        <td>{{o['created_at']}}</td>
+    </tr>
+    {%endfor%}
+</table>
+{% endblock %}

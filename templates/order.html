@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Выбор завтрака{% endblock %}
+
+{% block content %}
+<div class="order-card">
+    <h1>Собери свой завтрак</h1>
+    <form method="post">
+        <div class="form-group">
+            <label for="name">Твой комментарий:</label>
+            <input type="text" name="name" id="name" required placeholder="Comment">
+        </div>
+
+        <div class="form-group">
+            <label for="coffee">Выбери напиток:</label>
+            <select name="coffee" id="coffee">
+                <option value="" disabled selected>Не выбрано</option>
+                {% for coffee in coffees %}
+                    <option value="{{ coffee }}">{{ coffee }}</option>
+                {%endfor%}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="maindish">Выбери основное блюдо:</label>
+            <select name="maindish" id="maindish">
+                <option value="" disabled selected>Не выбрано</option>
+                {% for maindish in maindishs %}
+                    <option value="{{ maindish }}">{{ maindish }}</option>
+                {%endfor%}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="fruit">Выбери фрукт:</label>
+            <select name="fruit" id="fruit" >
+                <option value="" disabled selected>Не выбрано</option>
+                {% for fruit in fruits%}
+                    <option value="{{fruit}}">{{fruit}}</option>
+                {%endfor%}
+            </select>
+        </div>
+
+        <input type="submit" value="Отправить бусинке">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title%}Добро пожаловать{%endblock%}
+
+{% block content %}
+
+<div class="welcome-card">
+  <h1>Добро пожаловать, Ангелочек 🌸</h1>
+  
+    <a href="/order" class="order-button">Выбрать завтрак</a>
+
+    <div class="welcome-img">
+      <img src="{{url_for('static', filename='img/photo_2025-04-24_17-47-22.jpg')}}" alt="Завтрак" class="main-image">
+  </div>
+</div>
+{% endblock %}

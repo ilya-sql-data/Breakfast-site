@@ -1,0 +1,23 @@
+
+
+
+h1   {font-family: "Marck Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+h2, h3, h4, h5, h6  {font-family: "Poppins", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+body {background-color:  #FFF7F2;}
+input[text='text'], select {background-color: #FFFFFF;}
+
+.button-primary {
+  background-color: #ff69b4;  /* новый фон */
+  border-color: #ff69b4;      /* новый цвет границы */
+  color: white;               /* цвет текста */
+}
+
+.button-primary:hover {
+  background-color: #e75480;  /* фон при наведении */
+}

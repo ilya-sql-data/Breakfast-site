@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Ваш заказ{%endblock%}
+
+{% block content %}
+
+<div class="order-summary-card">
+    <h1>Твой ангельский комментарий: {{new_order["name"]}}</h1>
+
+    <ul>
+        <li>Ваш напиточек скоро будет: {{new_order.coffee}}</li>
+        <li>Ваша пища богов тоже скоро будет: {{new_order.maindish}}</li>
+        <li>Ваш фруктик тоже-тоже скоро будет: {{new_order.fruit}}</li>
+    </ul>
+
+
+    <a href="/" class="back-button">На главную</a>
+</div>
+
+{% endblock %}
