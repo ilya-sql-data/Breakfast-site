@@ -1,9 +1,5 @@
 import requests
 
-TOKEN = "7943664681:AAHzh2Y9MzHbXSbs62uLuPdZTT4LwnCcqBA"
-
-CHAT_ID = "1089917029"
-
 def send_order_notification(order):
     message = (
         f"Новый заказ!\n"
